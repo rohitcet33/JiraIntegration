@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 06:01:41</sys_created_on>
+        <sys_id>961d0f06c3e22010bf15b0d651102017</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_26525_jira_attachment_mapping.x_26525_jira.jira admin</sys_name>
+        <sys_package display_value="Jira Integration Hub" source="x_26525_jira">15de5ec2c3222010bf15b0d65110209f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_security_acl display_value="x_26525_jira_attachment_mapping">521d0f06c3e22010bf15b0d651102013</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_961d0f06c3e22010bf15b0d651102017</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 07:43:54</sys_updated_on>
+        <sys_user_role display_value="x_26525_jira.jira admin" name="x_26525_jira.jira admin">feee5602c3222010bf15b0d65110203c</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

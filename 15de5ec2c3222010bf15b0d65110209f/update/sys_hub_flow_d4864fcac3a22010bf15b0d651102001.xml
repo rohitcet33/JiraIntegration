@@ -1,0 +1,2146 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build>glide-quebec-12-09-2020__patch0-hotfix2-01-08-2021</compiler_build>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>jira_incident_ticket</internal_name>
+        <label_cache>[{"name":"9e0a8c3b-9688-40d6-942f-a340e605437c.table_name","label":"6➛Attachment Mapping Table","reference":"x_26525_jira_attachment_mapping","reference_display":"Attachment Mapping","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"9e0a8c3b-9688-40d6-942f-a340e605437c.record","label":"6➛Attachment Mapping Record","reference":"x_26525_jira_attachment_mapping","reference_display":"Attachment Mapping","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c9e1538d-9449-44f3-bbd9-49a3c3422a59.table_name","label":"7➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c9e1538d-9449-44f3-bbd9-49a3c3422a59.record","label":"7➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d2fe2a2c-1b30-4144-8f36-3b7572a81858.table_name","label":"2➛Incident Table","reference":"incident","reference_display":"Incident","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d2fe2a2c-1b30-4144-8f36-3b7572a81858.record","label":"2➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current","label":"Trigger➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","attributes":{}},{"name":"e1b187f9-aaf0-4ed1-a42c-39a8b2fbc31d.table_name","label":"2➛Transaction Table","reference":"x_26525_jira_transaction","reference_display":"label","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e1b187f9-aaf0-4ed1-a42c-39a8b2fbc31d.record","label":"2➛Transaction Record","reference":"x_26525_jira_transaction","reference_display":"label","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.description","label":"Trigger➛Incident Record➛Description","reference":"","reference_display":"Description","type":"string","base_type":"string","parent_table_name":"incident","column_name":"description"},{"name":"Created_1.current.short_description","label":"Trigger➛Incident Record➛Short description","reference":"","reference_display":"Short description","type":"string","base_type":"string","parent_table_name":"incident","column_name":"short_description"},{"name":"3ca2dd78-6979-46bf-8cfc-891a1bde9cd4.id","label":"1➛Jira ID","reference_display":"Jira ID","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"b2f2db86-c172-47ef-ab76-d2feb3b21342"}},{"name":"3ca2dd78-6979-46bf-8cfc-891a1bde9cd4.key","label":"1➛Key","reference_display":"Key","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"f4b9e4cc-347b-49f3-81b1-643dbb5985bf"}},{"name":"3ca2dd78-6979-46bf-8cfc-891a1bde9cd4.url","label":"1➛url","reference_display":"url","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"06ddade1-2762-4edb-8235-54c0322dc90b"}},{"name":"3ca2dd78-6979-46bf-8cfc-891a1bde9cd4.status","label":"1➛status","reference_display":"status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"3baf6d64-3251-42ad-8cd0-af3aacc9a505"}},{"name":"3ca2dd78-6979-46bf-8cfc-891a1bde9cd4.response","label":"1➛Response","reference_display":"Response","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"6cf2e7e5-8d4e-46a8-9db3-0a6848220e63"}},{"name":"292800c5-1076-455d-ab48-0fad93ef6e00.Records","label":"3➛Attachment Records","reference":"sys_attachment","reference_display":"Attachment","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"292800c5-1076-455d-ab48-0fad93ef6e00.Table","label":"3➛Attachment Table","reference":"sys_attachment","reference_display":"Attachment","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"292800c5-1076-455d-ab48-0fad93ef6e00.Count","label":"3➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.sys_id","label":"Trigger➛Incident Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"incident","column_name":"sys_id"},{"name":"be83ac94-dd22-4291-9d9d-79f738744a4e.item","label":"4➛Attachment Record","reference":"sys_attachment","reference_display":"Attachment","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"a4c97e35-57c5-441f-98bc-882f3efcc26e.response","label":"5➛Response","reference_display":"Response","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"b92c8f47-10ae-4bb5-8e0f-33baaf57767b"}},{"name":"a4c97e35-57c5-441f-98bc-882f3efcc26e.status","label":"5➛Status","reference_display":"Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"6cae94d6-05f9-4161-b366-86f8c29261f3"}},{"name":"a4c97e35-57c5-441f-98bc-882f3efcc26e.attachment_id","label":"5➛Attachment Id","reference_display":"Attachment Id","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"41c0fc3e-30e8-4d3b-b200-ba9ceefe67c8"}},{"name":"a4c97e35-57c5-441f-98bc-882f3efcc26e.url","label":"5➛url","reference_display":"url","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"1118adb0-bc32-4106-82e1-e215535bc48a"}},{"name":"a4c97e35-57c5-441f-98bc-882f3efcc26e.name","label":"5➛name","reference_display":"name","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"5fb7d9c2-ad54-48ec-ae17-c47889f7934e"}},{"name":"d2fe2a2c-1b30-4144-8f36-3b7572a81858.record.x_26525_jira_key","label":"2➛Incident Record➛Key","reference":"","reference_display":"Key","type":"string","base_type":"string","parent_table_name":"incident","column_name":"x_26525_jira_key"},{"name":"be83ac94-dd22-4291-9d9d-79f738744a4e.item.sys_id","label":"4➛Attachment Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_attachment","column_name":"sys_id"},{"name":"083f4569-5a38-4914-a663-739a628040c4.record","label":"7➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"083f4569-5a38-4914-a663-739a628040c4.table_name","label":"7➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <latest_snapshot>2c2f811ac32e2010bf15b0d651102083</latest_snapshot>
+        <master_snapshot>93e74f8ec3a22010bf15b0d6511020cd</master_snapshot>
+        <name>JIRA Incident Ticket Create</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id>bd6d4196c32e2010bf15b0d651102006</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:32:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d4864fcac3a22010bf15b0d651102001</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>JIRA Incident Ticket Create</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Jira Integration Hub" source="x_26525_jira">15de5ec2c3222010bf15b0d65110209f</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_update_name>sys_hub_flow_d4864fcac3a22010bf15b0d651102001</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:22:16</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=d4864fcac3a22010bf15b0d651102001"/>
+    <sys_variable_value action="delete_multiple" query="document_key=d4864fcac3a22010bf15b0d651102001"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="incident">short_descriptionSTARTSWITHJira<item endquery="false" field="short_description" goto="false" newquery="false" operator="STARTSWITH" or="false" value="Jira"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>false</on_update>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 15:22:14</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bd6d4196c32e2010bf15b0d651102006</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:22:14</sys_updated_on>
+        <table>incident</table>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"table":"sys_trigger_runner_mapping","id":"396d4196c32e2010bf15b0d651102007","name":"trigger_runner","type":"java.util.Collections$UnmodifiableMap"}</data>
+        <identifier>d4864fcac3a22010bf15b0d651102001</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 15:22:14</sys_created_on>
+        <sys_id>396d4196c32e2010bf15b0d651102007</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:22:14</sys_updated_on>
+        <trigger display_value="">bd6d4196c32e2010bf15b0d651102006</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_json_chunk action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAGXLWwqAIBBA0b3MdytwKxGD5fggGUFHLKK99yAo6Pce7ga5MtqYGgYGBaOeZpdTZQPdTc0TYy2UMYYioPrh0wuJBHbXl8T/jpc1r48mRlqE2JA5u9WxEOwH5v2lw4YAAAA=</data>
+        <document_id>396d4196c32e2010bf15b0d651102007</document_id>
+        <field>trigger_runner</field>
+        <length>144</length>
+        <position>0</position>
+        <source_table>sys_trigger_runner_mapping</source_table>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 15:22:14</sys_created_on>
+        <sys_id>bd6d4196c32e2010bf15b0d651102007</sys_id>
+    </sys_json_chunk>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=d4864fcac3a22010bf15b0d651102001^sys_idNOT IN396d4196c32e2010bf15b0d651102007"/>
+    <sys_hub_flow_component action="delete_multiple" query="flow=d4864fcac3a22010bf15b0d651102001^sys_idNOT IN0f29fb46c3a62010bf15b0d6511020f0,17d7cb8ec3a22010bf15b0d651102024,75a5f302c3a62010bf15b0d6511020fe,83d7cb8ec3a22010bf15b0d651102017,b5a5f302c3a62010bf15b0d6511020ea,f1a5f302c3a62010bf15b0d6511020ee"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="JIRA Incident Ticket Create">d4864fcac3a22010bf15b0d651102001</flow>
+        <order>6</order>
+        <parent_ui_id>be83ac94-dd22-4291-9d9d-79f738744a4e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 09:14:14</sys_created_on>
+        <sys_id>0f29fb46c3a62010bf15b0d6511020f0</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:29:50</sys_updated_on>
+        <ui_id>9e0a8c3b-9688-40d6-942f-a340e605437c</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=0f29fb46c3a62010bf15b0d6511020f0"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>0f29fb46c3a62010bf15b0d6511020f0</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 09:14:14</sys_created_on>
+        <sys_id>0f29fb46c3a62010bf15b0d6511020f2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 09:14:14</sys_updated_on>
+        <value>x_26525_jira_attachment_mapping</value>
+        <variable display_value="Table">61e05916c31332002841b63b12d3aee4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=0f29fb46c3a62010bf15b0d6511020f0"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>0f29fb46c3a62010bf15b0d6511020f0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 09:14:14</sys_created_on>
+        <sys_id>c329fb46c3a62010bf15b0d6511020f2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 09:14:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>0f29fb46c3a62010bf15b0d6511020f0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 09:14:14</sys_created_on>
+        <sys_id>8b29fb46c3a62010bf15b0d6511020f2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:21:58</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value>jira_attachment_id={{a4c97e35-57c5-441f-98bc-882f3efcc26e.attachment_id}}^servicenow_attachment_id={{be83ac94-dd22-4291-9d9d-79f738744a4e.item.sys_id}}^name={{a4c97e35-57c5-441f-98bc-882f3efcc26e.name}}^task={{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="JIRA Incident Ticket Create">d4864fcac3a22010bf15b0d651102001</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:38:48</sys_created_on>
+        <sys_id>17d7cb8ec3a22010bf15b0d651102024</sys_id>
+        <sys_mod_count>42</sys_mod_count>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:29:49</sys_updated_on>
+        <ui_id>d2fe2a2c-1b30-4144-8f36-3b7572a81858</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=17d7cb8ec3a22010bf15b0d651102024"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>17d7cb8ec3a22010bf15b0d651102024</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:38:48</sys_created_on>
+        <sys_id>d7d7cb8ec3a22010bf15b0d651102026</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:38:48</sys_updated_on>
+        <value>incident</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=17d7cb8ec3a22010bf15b0d651102024"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>17d7cb8ec3a22010bf15b0d651102024</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:38:48</sys_created_on>
+        <sys_id>93d7cb8ec3a22010bf15b0d651102026</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:38:48</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>17d7cb8ec3a22010bf15b0d651102024</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:38:48</sys_created_on>
+        <sys_id>dfd7cb8ec3a22010bf15b0d651102025</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:38:48</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>17d7cb8ec3a22010bf15b0d651102024</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:38:48</sys_created_on>
+        <sys_id>57d7cb8ec3a22010bf15b0d651102026</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:38:48</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>x_26525_jira_url={{3ca2dd78-6979-46bf-8cfc-891a1bde9cd4.url}}^x_26525_jira_id={{3ca2dd78-6979-46bf-8cfc-891a1bde9cd4.id}}^x_26525_jira_key={{3ca2dd78-6979-46bf-8cfc-891a1bde9cd4.key}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Jira Send Attachment">c78213cac3e22010bf15b0d65110209e</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>c78213cac3e22010bf15b0d65110209e</compiled_snapshot>
+        <display_text/>
+        <flow display_value="JIRA Incident Ticket Create">d4864fcac3a22010bf15b0d651102001</flow>
+        <order>5</order>
+        <parent_ui_id>be83ac94-dd22-4291-9d9d-79f738744a4e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 08:58:52</sys_created_on>
+        <sys_id>75a5f302c3a62010bf15b0d6511020fe</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:29:50</sys_updated_on>
+        <ui_id>a4c97e35-57c5-441f-98bc-882f3efcc26e</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=75a5f302c3a62010bf15b0d6511020fe"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>75a5f302c3a62010bf15b0d6511020fe</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 08:58:52</sys_created_on>
+        <sys_id>b1a53702c3a62010bf15b0d651102000</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 08:58:52</sys_updated_on>
+        <value>https://spssweb.atlassian.net</value>
+        <variable display_value="Endpoint">578213cac3e22010bf15b0d6511020c8</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=75a5f302c3a62010bf15b0d6511020fe"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>attachment_id</field>
+        <id>75a5f302c3a62010bf15b0d6511020fe</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 08:58:52</sys_created_on>
+        <sys_id>b9a5f302c3a62010bf15b0d6511020ff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 08:58:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c78213cac3e22010bf15b0d65110209e</table>
+        <value>{{be83ac94-dd22-4291-9d9d-79f738744a4e.item.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>endpoint</field>
+        <id>75a5f302c3a62010bf15b0d6511020fe</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 08:58:52</sys_created_on>
+        <sys_id>7da5f302c3a62010bf15b0d6511020ff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 08:58:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c78213cac3e22010bf15b0d65110209e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>jira_number</field>
+        <id>75a5f302c3a62010bf15b0d6511020fe</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 08:58:52</sys_created_on>
+        <sys_id>31a53702c3a62010bf15b0d651102000</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 08:58:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c78213cac3e22010bf15b0d65110209e</table>
+        <value>{{d2fe2a2c-1b30-4144-8f36-3b7572a81858.record.x_26525_jira_key}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Jira Issue Create">9474cf8ac3a22010bf15b0d651102003</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>9474cf8ac3a22010bf15b0d651102003</compiled_snapshot>
+        <display_text/>
+        <flow display_value="JIRA Incident Ticket Create">d4864fcac3a22010bf15b0d651102001</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:38:47</sys_created_on>
+        <sys_id>83d7cb8ec3a22010bf15b0d651102017</sys_id>
+        <sys_mod_count>42</sys_mod_count>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:29:49</sys_updated_on>
+        <ui_id>3ca2dd78-6979-46bf-8cfc-891a1bde9cd4</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=83d7cb8ec3a22010bf15b0d651102017"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>83d7cb8ec3a22010bf15b0d651102017</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:38:47</sys_created_on>
+        <sys_id>0fd7cb8ec3a22010bf15b0d65110201a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:38:47</sys_updated_on>
+        <value>SNOW1</value>
+        <variable display_value="Project Key">1474cf8ac3a22010bf15b0d651102006</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>83d7cb8ec3a22010bf15b0d651102017</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:38:47</sys_created_on>
+        <sys_id>4bd7cb8ec3a22010bf15b0d65110201a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:38:47</sys_updated_on>
+        <value>Bug</value>
+        <variable display_value="issuetype">6474cf8ac3a22010bf15b0d65110201a</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=83d7cb8ec3a22010bf15b0d651102017"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>description</field>
+        <id>83d7cb8ec3a22010bf15b0d651102017</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:38:47</sys_created_on>
+        <sys_id>07d7cb8ec3a22010bf15b0d65110201a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:38:47</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9474cf8ac3a22010bf15b0d651102003</table>
+        <value>{{Created_1.current.description}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>issuetype</field>
+        <id>83d7cb8ec3a22010bf15b0d651102017</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:38:47</sys_created_on>
+        <sys_id>43d7cb8ec3a22010bf15b0d65110201a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:38:47</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9474cf8ac3a22010bf15b0d651102003</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>project_key</field>
+        <id>83d7cb8ec3a22010bf15b0d651102017</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:38:47</sys_created_on>
+        <sys_id>c7d7cb8ec3a22010bf15b0d65110201a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:38:47</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9474cf8ac3a22010bf15b0d651102003</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>summary</field>
+        <id>83d7cb8ec3a22010bf15b0d651102017</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:38:47</sys_created_on>
+        <sys_id>8bd7cb8ec3a22010bf15b0d651102019</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:38:47</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9474cf8ac3a22010bf15b0d651102003</table>
+        <value>{{Created_1.current.short_description}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="JIRA Incident Ticket Create">d4864fcac3a22010bf15b0d651102001</flow>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 08:58:51</sys_created_on>
+        <sys_id>b5a5f302c3a62010bf15b0d6511020ea</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:29:50</sys_updated_on>
+        <ui_id>292800c5-1076-455d-ab48-0fad93ef6e00</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=b5a5f302c3a62010bf15b0d6511020ea"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>b5a5f302c3a62010bf15b0d6511020ea</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 08:58:51</sys_created_on>
+        <sys_id>31a5f302c3a62010bf15b0d6511020ed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 08:58:51</sys_updated_on>
+        <value>sys_attachment</value>
+        <variable display_value="Table">8f400a1587003300663ca1bb36cb0b4b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=b5a5f302c3a62010bf15b0d6511020ea"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>b5a5f302c3a62010bf15b0d6511020ea</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 08:58:51</sys_created_on>
+        <sys_id>f5a5f302c3a62010bf15b0d6511020ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 08:58:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value>table_name=incident^table_sys_id={{Created_1.current.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>b5a5f302c3a62010bf15b0d6511020ea</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 08:58:51</sys_created_on>
+        <sys_id>bda5f302c3a62010bf15b0d6511020ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 08:58:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">f9a5f302c3a62010bf15b0d6511020ed</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="JIRA Incident Ticket Create">d4864fcac3a22010bf15b0d651102001</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 08:58:51</sys_created_on>
+        <sys_id>f1a5f302c3a62010bf15b0d6511020ee</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:22:16</sys_updated_on>
+        <ui_id>be83ac94-dd22-4291-9d9d-79f738744a4e</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=f1a5f302c3a62010bf15b0d6511020ee"/>
+    <sys_element_mapping action="delete_multiple" query="id=f1a5f302c3a62010bf15b0d6511020ee"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>items</field>
+        <id>f1a5f302c3a62010bf15b0d6511020ee</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 08:58:52</sys_created_on>
+        <sys_id>79a5f302c3a62010bf15b0d6511020f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 08:58:52</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
+        <value>{{292800c5-1076-455d-ab48-0fad93ef6e00.Records}}</value>
+    </sys_element_mapping>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=d4864fcac3a22010bf15b0d651102001^sys_idNOT IN47d7cb8ec3a22010bf15b0d651102007"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="JIRA Incident Ticket Create">d4864fcac3a22010bf15b0d651102001</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:38:47</sys_created_on>
+        <sys_id>47d7cb8ec3a22010bf15b0d651102007</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:22:16</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=47d7cb8ec3a22010bf15b0d651102007"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>47d7cb8ec3a22010bf15b0d651102007</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:38:47</sys_created_on>
+        <sys_id>03d7cb8ec3a22010bf15b0d651102009</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:38:47</sys_updated_on>
+        <value>incident</value>
+        <variable display_value="Table">cfca92e0c31322002841b63b12d3ae00</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>47d7cb8ec3a22010bf15b0d651102007</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:38:47</sys_created_on>
+        <sys_id>0bd7cb8ec3a22010bf15b0d651102008</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:38:47</sys_updated_on>
+        <value>short_descriptionSTARTSWITHJira</value>
+        <variable display_value="Condition">66aadea0c31322002841b63b12d3aebf</variable>
+    </sys_variable_value>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=d4864fcac3a22010bf15b0d651102001^sys_idNOT IN90864fcac3a22010bf15b0d651102003"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>d4864fcac3a22010bf15b0d651102001</id>
+        <name>JIRA Incident Ticket</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:32:51</sys_created_on>
+        <sys_id>90864fcac3a22010bf15b0d651102003</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:32:51</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_flow_input action="delete_multiple" query="model=d4864fcac3a22010bf15b0d651102001^sys_idNOT IN4bd7cb8ec3a22010bf15b0d651102000,72d78b8ec3a22010bf15b0d6511020fa"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="JIRA Incident Ticket Create">d4864fcac3a22010bf15b0d651102001</model>
+        <model_id>d4864fcac3a22010bf15b0d651102001</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_d4864fcac3a22010bf15b0d651102001</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:38:47</sys_created_on>
+        <sys_id>4bd7cb8ec3a22010bf15b0d651102000</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:22:16</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="JIRA Incident Ticket Create">d4864fcac3a22010bf15b0d651102001</model>
+        <model_id>d4864fcac3a22010bf15b0d651102001</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_d4864fcac3a22010bf15b0d651102001</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:38:46</sys_created_on>
+        <sys_id>72d78b8ec3a22010bf15b0d6511020fa</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:22:15</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_instance action="delete_multiple" query="flow=d4864fcac3a22010bf15b0d651102001^sys_idNOT IN0f29fb46c3a62010bf15b0d6511020f0,17d7cb8ec3a22010bf15b0d651102024,75a5f302c3a62010bf15b0d6511020fe,83d7cb8ec3a22010bf15b0d651102017,b5a5f302c3a62010bf15b0d6511020ea"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="JIRA Incident Ticket Create">d4864fcac3a22010bf15b0d651102001</flow>
+        <order>6</order>
+        <parent_ui_id>be83ac94-dd22-4291-9d9d-79f738744a4e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 09:14:14</sys_created_on>
+        <sys_id>0f29fb46c3a62010bf15b0d6511020f0</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:29:50</sys_updated_on>
+        <ui_id>9e0a8c3b-9688-40d6-942f-a340e605437c</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=0f29fb46c3a62010bf15b0d6511020f0"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>0f29fb46c3a62010bf15b0d6511020f0</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 09:14:14</sys_created_on>
+        <sys_id>0f29fb46c3a62010bf15b0d6511020f2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 09:14:14</sys_updated_on>
+        <value>x_26525_jira_attachment_mapping</value>
+        <variable display_value="Table">61e05916c31332002841b63b12d3aee4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=0f29fb46c3a62010bf15b0d6511020f0"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>0f29fb46c3a62010bf15b0d6511020f0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 09:14:14</sys_created_on>
+        <sys_id>c329fb46c3a62010bf15b0d6511020f2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 09:14:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>0f29fb46c3a62010bf15b0d6511020f0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 09:14:14</sys_created_on>
+        <sys_id>8b29fb46c3a62010bf15b0d6511020f2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:21:58</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value>jira_attachment_id={{a4c97e35-57c5-441f-98bc-882f3efcc26e.attachment_id}}^servicenow_attachment_id={{be83ac94-dd22-4291-9d9d-79f738744a4e.item.sys_id}}^name={{a4c97e35-57c5-441f-98bc-882f3efcc26e.name}}^task={{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="JIRA Incident Ticket Create">d4864fcac3a22010bf15b0d651102001</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:38:48</sys_created_on>
+        <sys_id>17d7cb8ec3a22010bf15b0d651102024</sys_id>
+        <sys_mod_count>42</sys_mod_count>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:29:49</sys_updated_on>
+        <ui_id>d2fe2a2c-1b30-4144-8f36-3b7572a81858</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=17d7cb8ec3a22010bf15b0d651102024"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>17d7cb8ec3a22010bf15b0d651102024</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:38:48</sys_created_on>
+        <sys_id>d7d7cb8ec3a22010bf15b0d651102026</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:38:48</sys_updated_on>
+        <value>incident</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=17d7cb8ec3a22010bf15b0d651102024"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>17d7cb8ec3a22010bf15b0d651102024</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:38:48</sys_created_on>
+        <sys_id>93d7cb8ec3a22010bf15b0d651102026</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:38:48</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>17d7cb8ec3a22010bf15b0d651102024</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:38:48</sys_created_on>
+        <sys_id>dfd7cb8ec3a22010bf15b0d651102025</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:38:48</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>17d7cb8ec3a22010bf15b0d651102024</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:38:48</sys_created_on>
+        <sys_id>57d7cb8ec3a22010bf15b0d651102026</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:38:48</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>x_26525_jira_url={{3ca2dd78-6979-46bf-8cfc-891a1bde9cd4.url}}^x_26525_jira_id={{3ca2dd78-6979-46bf-8cfc-891a1bde9cd4.id}}^x_26525_jira_key={{3ca2dd78-6979-46bf-8cfc-891a1bde9cd4.key}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=17d7cb8ec3a22010bf15b0d651102024^sys_idNOT IN57d7cb8ec3a22010bf15b0d651102025"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>values</input_name>
+        <instance>17d7cb8ec3a22010bf15b0d651102024</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"x_26525_jira_id":{"scriptActive":false,"savedValue":""}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:38:48</sys_created_on>
+        <sys_id>57d7cb8ec3a22010bf15b0d651102025</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:38:48</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Jira Send Attachment">c78213cac3e22010bf15b0d65110209e</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>c78213cac3e22010bf15b0d65110209e</compiled_snapshot>
+        <display_text/>
+        <flow display_value="JIRA Incident Ticket Create">d4864fcac3a22010bf15b0d651102001</flow>
+        <order>5</order>
+        <parent_ui_id>be83ac94-dd22-4291-9d9d-79f738744a4e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 08:58:52</sys_created_on>
+        <sys_id>75a5f302c3a62010bf15b0d6511020fe</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:29:50</sys_updated_on>
+        <ui_id>a4c97e35-57c5-441f-98bc-882f3efcc26e</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=75a5f302c3a62010bf15b0d6511020fe"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>75a5f302c3a62010bf15b0d6511020fe</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 08:58:52</sys_created_on>
+        <sys_id>b1a53702c3a62010bf15b0d651102000</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 08:58:52</sys_updated_on>
+        <value>https://spssweb.atlassian.net</value>
+        <variable display_value="Endpoint">578213cac3e22010bf15b0d6511020c8</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=75a5f302c3a62010bf15b0d6511020fe"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>attachment_id</field>
+        <id>75a5f302c3a62010bf15b0d6511020fe</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 08:58:52</sys_created_on>
+        <sys_id>b9a5f302c3a62010bf15b0d6511020ff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 08:58:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c78213cac3e22010bf15b0d65110209e</table>
+        <value>{{be83ac94-dd22-4291-9d9d-79f738744a4e.item.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>endpoint</field>
+        <id>75a5f302c3a62010bf15b0d6511020fe</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 08:58:52</sys_created_on>
+        <sys_id>7da5f302c3a62010bf15b0d6511020ff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 08:58:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c78213cac3e22010bf15b0d65110209e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>jira_number</field>
+        <id>75a5f302c3a62010bf15b0d6511020fe</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 08:58:52</sys_created_on>
+        <sys_id>31a53702c3a62010bf15b0d651102000</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 08:58:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c78213cac3e22010bf15b0d65110209e</table>
+        <value>{{d2fe2a2c-1b30-4144-8f36-3b7572a81858.record.x_26525_jira_key}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Jira Issue Create">9474cf8ac3a22010bf15b0d651102003</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>9474cf8ac3a22010bf15b0d651102003</compiled_snapshot>
+        <display_text/>
+        <flow display_value="JIRA Incident Ticket Create">d4864fcac3a22010bf15b0d651102001</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:38:47</sys_created_on>
+        <sys_id>83d7cb8ec3a22010bf15b0d651102017</sys_id>
+        <sys_mod_count>42</sys_mod_count>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:29:49</sys_updated_on>
+        <ui_id>3ca2dd78-6979-46bf-8cfc-891a1bde9cd4</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=83d7cb8ec3a22010bf15b0d651102017"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>83d7cb8ec3a22010bf15b0d651102017</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:38:47</sys_created_on>
+        <sys_id>0fd7cb8ec3a22010bf15b0d65110201a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:38:47</sys_updated_on>
+        <value>SNOW1</value>
+        <variable display_value="Project Key">1474cf8ac3a22010bf15b0d651102006</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>83d7cb8ec3a22010bf15b0d651102017</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:38:47</sys_created_on>
+        <sys_id>4bd7cb8ec3a22010bf15b0d65110201a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:38:47</sys_updated_on>
+        <value>Bug</value>
+        <variable display_value="issuetype">6474cf8ac3a22010bf15b0d65110201a</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=83d7cb8ec3a22010bf15b0d651102017"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>description</field>
+        <id>83d7cb8ec3a22010bf15b0d651102017</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:38:47</sys_created_on>
+        <sys_id>07d7cb8ec3a22010bf15b0d65110201a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:38:47</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9474cf8ac3a22010bf15b0d651102003</table>
+        <value>{{Created_1.current.description}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>issuetype</field>
+        <id>83d7cb8ec3a22010bf15b0d651102017</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:38:47</sys_created_on>
+        <sys_id>43d7cb8ec3a22010bf15b0d65110201a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:38:47</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9474cf8ac3a22010bf15b0d651102003</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>project_key</field>
+        <id>83d7cb8ec3a22010bf15b0d651102017</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:38:47</sys_created_on>
+        <sys_id>c7d7cb8ec3a22010bf15b0d65110201a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:38:47</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9474cf8ac3a22010bf15b0d651102003</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>summary</field>
+        <id>83d7cb8ec3a22010bf15b0d651102017</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:38:47</sys_created_on>
+        <sys_id>8bd7cb8ec3a22010bf15b0d651102019</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:38:47</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9474cf8ac3a22010bf15b0d651102003</table>
+        <value>{{Created_1.current.short_description}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="JIRA Incident Ticket Create">d4864fcac3a22010bf15b0d651102001</flow>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 08:58:51</sys_created_on>
+        <sys_id>b5a5f302c3a62010bf15b0d6511020ea</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:29:50</sys_updated_on>
+        <ui_id>292800c5-1076-455d-ab48-0fad93ef6e00</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=b5a5f302c3a62010bf15b0d6511020ea"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>b5a5f302c3a62010bf15b0d6511020ea</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 08:58:51</sys_created_on>
+        <sys_id>31a5f302c3a62010bf15b0d6511020ed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 08:58:51</sys_updated_on>
+        <value>sys_attachment</value>
+        <variable display_value="Table">8f400a1587003300663ca1bb36cb0b4b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=b5a5f302c3a62010bf15b0d6511020ea"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>b5a5f302c3a62010bf15b0d6511020ea</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 08:58:51</sys_created_on>
+        <sys_id>f5a5f302c3a62010bf15b0d6511020ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 08:58:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value>table_name=incident^table_sys_id={{Created_1.current.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>b5a5f302c3a62010bf15b0d6511020ea</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 08:58:51</sys_created_on>
+        <sys_id>bda5f302c3a62010bf15b0d6511020ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 08:58:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=d4864fcac3a22010bf15b0d651102001^sys_idNOT INf1a5f302c3a62010bf15b0d6511020ee"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">f9a5f302c3a62010bf15b0d6511020ed</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="JIRA Incident Ticket Create">d4864fcac3a22010bf15b0d651102001</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 08:58:51</sys_created_on>
+        <sys_id>f1a5f302c3a62010bf15b0d6511020ee</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:22:16</sys_updated_on>
+        <ui_id>be83ac94-dd22-4291-9d9d-79f738744a4e</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=f1a5f302c3a62010bf15b0d6511020ee"/>
+    <sys_element_mapping action="delete_multiple" query="id=f1a5f302c3a62010bf15b0d6511020ee"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>items</field>
+        <id>f1a5f302c3a62010bf15b0d6511020ee</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 08:58:52</sys_created_on>
+        <sys_id>79a5f302c3a62010bf15b0d6511020f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 08:58:52</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
+        <value>{{292800c5-1076-455d-ab48-0fad93ef6e00.Records}}</value>
+    </sys_element_mapping>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_d4864fcac3a22010bf15b0d651102001^sys_idNOT IN87d78b8ec3a22010bf15b0d6511020ff,8fd7cb8ec3a22010bf15b0d651102004"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_d4864fcac3a22010bf15b0d651102001</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:38:46</sys_created_on>
+        <sys_id>87d78b8ec3a22010bf15b0d6511020ff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Jira Integration Hub" source="x_26525_jira">15de5ec2c3222010bf15b0d65110209f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:38:46</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_d4864fcac3a22010bf15b0d651102001</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:38:47</sys_created_on>
+        <sys_id>8fd7cb8ec3a22010bf15b0d651102004</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Jira Integration Hub" source="x_26525_jira">15de5ec2c3222010bf15b0d65110209f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:38:47</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=d4864fcac3a22010bf15b0d651102001^sys_idNOT INacf78f8ec3a22010bf15b0d6511020c4"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"acf78f8ec3a22010bf15b0d6511020c4","name":"plan"}}</plan>
+        <plan_id>d4864fcac3a22010bf15b0d651102001</plan_id>
+        <snapshot>2c2f811ac32e2010bf15b0d651102083</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:39:09</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>acf78f8ec3a22010bf15b0d6511020c4</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:22:14</sys_updated_on>
+        <trigger display_value="">bd6d4196c32e2010bf15b0d651102006</trigger>
+    </sys_flow_trigger_plan>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>jira_incident_ticket</internal_name>
+        <label_cache>[{"name":"9e0a8c3b-9688-40d6-942f-a340e605437c.table_name","label":"6➛Attachment Mapping Table","reference":"x_26525_jira_attachment_mapping","reference_display":"Attachment Mapping","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"9e0a8c3b-9688-40d6-942f-a340e605437c.record","label":"6➛Attachment Mapping Record","reference":"x_26525_jira_attachment_mapping","reference_display":"Attachment Mapping","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c9e1538d-9449-44f3-bbd9-49a3c3422a59.table_name","label":"7➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c9e1538d-9449-44f3-bbd9-49a3c3422a59.record","label":"7➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d2fe2a2c-1b30-4144-8f36-3b7572a81858.table_name","label":"2➛Incident Table","reference":"incident","reference_display":"Incident","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d2fe2a2c-1b30-4144-8f36-3b7572a81858.record","label":"2➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current","label":"Trigger➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","attributes":{}},{"name":"e1b187f9-aaf0-4ed1-a42c-39a8b2fbc31d.table_name","label":"2➛Transaction Table","reference":"x_26525_jira_transaction","reference_display":"label","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e1b187f9-aaf0-4ed1-a42c-39a8b2fbc31d.record","label":"2➛Transaction Record","reference":"x_26525_jira_transaction","reference_display":"label","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.description","label":"Trigger➛Incident Record➛Description","reference":"","reference_display":"Description","type":"string","base_type":"string","parent_table_name":"incident","column_name":"description"},{"name":"Created_1.current.short_description","label":"Trigger➛Incident Record➛Short description","reference":"","reference_display":"Short description","type":"string","base_type":"string","parent_table_name":"incident","column_name":"short_description"},{"name":"3ca2dd78-6979-46bf-8cfc-891a1bde9cd4.id","label":"1➛Jira ID","reference_display":"Jira ID","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"b2f2db86-c172-47ef-ab76-d2feb3b21342"}},{"name":"3ca2dd78-6979-46bf-8cfc-891a1bde9cd4.key","label":"1➛Key","reference_display":"Key","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"f4b9e4cc-347b-49f3-81b1-643dbb5985bf"}},{"name":"3ca2dd78-6979-46bf-8cfc-891a1bde9cd4.url","label":"1➛url","reference_display":"url","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"06ddade1-2762-4edb-8235-54c0322dc90b"}},{"name":"3ca2dd78-6979-46bf-8cfc-891a1bde9cd4.status","label":"1➛status","reference_display":"status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"3baf6d64-3251-42ad-8cd0-af3aacc9a505"}},{"name":"3ca2dd78-6979-46bf-8cfc-891a1bde9cd4.response","label":"1➛Response","reference_display":"Response","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"6cf2e7e5-8d4e-46a8-9db3-0a6848220e63"}},{"name":"292800c5-1076-455d-ab48-0fad93ef6e00.Records","label":"3➛Attachment Records","reference":"sys_attachment","reference_display":"Attachment","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"292800c5-1076-455d-ab48-0fad93ef6e00.Table","label":"3➛Attachment Table","reference":"sys_attachment","reference_display":"Attachment","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"292800c5-1076-455d-ab48-0fad93ef6e00.Count","label":"3➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.sys_id","label":"Trigger➛Incident Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"incident","column_name":"sys_id"},{"name":"be83ac94-dd22-4291-9d9d-79f738744a4e.item","label":"4➛Attachment Record","reference":"sys_attachment","reference_display":"Attachment","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"a4c97e35-57c5-441f-98bc-882f3efcc26e.response","label":"5➛Response","reference_display":"Response","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"b92c8f47-10ae-4bb5-8e0f-33baaf57767b"}},{"name":"a4c97e35-57c5-441f-98bc-882f3efcc26e.status","label":"5➛Status","reference_display":"Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"6cae94d6-05f9-4161-b366-86f8c29261f3"}},{"name":"a4c97e35-57c5-441f-98bc-882f3efcc26e.attachment_id","label":"5➛Attachment Id","reference_display":"Attachment Id","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"41c0fc3e-30e8-4d3b-b200-ba9ceefe67c8"}},{"name":"a4c97e35-57c5-441f-98bc-882f3efcc26e.url","label":"5➛url","reference_display":"url","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"1118adb0-bc32-4106-82e1-e215535bc48a"}},{"name":"a4c97e35-57c5-441f-98bc-882f3efcc26e.name","label":"5➛name","reference_display":"name","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"5fb7d9c2-ad54-48ec-ae17-c47889f7934e"}},{"name":"d2fe2a2c-1b30-4144-8f36-3b7572a81858.record.x_26525_jira_key","label":"2➛Incident Record➛Key","reference":"","reference_display":"Key","type":"string","base_type":"string","parent_table_name":"incident","column_name":"x_26525_jira_key"},{"name":"be83ac94-dd22-4291-9d9d-79f738744a4e.item.sys_id","label":"4➛Attachment Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_attachment","column_name":"sys_id"},{"name":"083f4569-5a38-4914-a663-739a628040c4.record","label":"7➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"083f4569-5a38-4914-a663-739a628040c4.table_name","label":"7➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master>true</master>
+        <name>JIRA Incident Ticket Create</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="JIRA Incident Ticket Create">d4864fcac3a22010bf15b0d651102001</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:39:04</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>93e74f8ec3a22010bf15b0d6511020cd</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:22:07</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=93e74f8ec3a22010bf15b0d6511020cd"/>
+    <sys_variable_value action="delete_multiple" query="document_key=93e74f8ec3a22010bf15b0d6511020cd"/>
+    <sys_hub_flow_component action="delete_multiple" query="flow=93e74f8ec3a22010bf15b0d6511020cd^sys_idNOT IN2d86bb42c3a62010bf15b0d651102035,9986bb42c3a62010bf15b0d651102021,9c593386c3a62010bf15b0d6511020fb,a7e74f8ec3a22010bf15b0d6511020fe,afe78f8ec3a22010bf15b0d65110200b,e186bb42c3a62010bf15b0d651102038"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="">a01a7bc6c3a62010bf15b0d65110209f</action_type>
+        <action_type_parent display_value="Jira Send Attachment">99394702c3e22010bf15b0d65110206d</action_type_parent>
+        <comment/>
+        <compiled_snapshot>a01a7bc6c3a62010bf15b0d65110209f</compiled_snapshot>
+        <display_text/>
+        <flow display_value="JIRA Incident Ticket Create">93e74f8ec3a22010bf15b0d6511020cd</flow>
+        <order>5</order>
+        <parent_ui_id>be83ac94-dd22-4291-9d9d-79f738744a4e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 09:02:40</sys_created_on>
+        <sys_id>2d86bb42c3a62010bf15b0d651102035</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:29:50</sys_updated_on>
+        <ui_id>a4c97e35-57c5-441f-98bc-882f3efcc26e</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=2d86bb42c3a62010bf15b0d651102035"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>2d86bb42c3a62010bf15b0d651102035</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 09:02:40</sys_created_on>
+        <sys_id>6986bb42c3a62010bf15b0d651102037</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 09:02:40</sys_updated_on>
+        <value>https://spssweb.atlassian.net</value>
+        <variable display_value="Endpoint">578213cac3e22010bf15b0d6511020c8</variable>
+    </sys_variable_value>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="">4e17ff82c3a62010bf15b0d6511020fb</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <comment/>
+        <compiled_snapshot>4e17ff82c3a62010bf15b0d6511020fb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="JIRA Incident Ticket Create">93e74f8ec3a22010bf15b0d6511020cd</flow>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 09:02:39</sys_created_on>
+        <sys_id>9986bb42c3a62010bf15b0d651102021</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:29:50</sys_updated_on>
+        <ui_id>292800c5-1076-455d-ab48-0fad93ef6e00</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=9986bb42c3a62010bf15b0d651102021"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>9986bb42c3a62010bf15b0d651102021</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 09:02:39</sys_created_on>
+        <sys_id>1186bb42c3a62010bf15b0d651102024</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 09:02:39</sys_updated_on>
+        <value>sys_attachment</value>
+        <variable display_value="Table">8f400a1587003300663ca1bb36cb0b4b</variable>
+    </sys_variable_value>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="JIRA Incident Ticket Create">93e74f8ec3a22010bf15b0d6511020cd</flow>
+        <order>6</order>
+        <parent_ui_id>be83ac94-dd22-4291-9d9d-79f738744a4e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 09:14:52</sys_created_on>
+        <sys_id>9c593386c3a62010bf15b0d6511020fb</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:29:50</sys_updated_on>
+        <ui_id>9e0a8c3b-9688-40d6-942f-a340e605437c</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=9c593386c3a62010bf15b0d6511020fb"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>9c593386c3a62010bf15b0d6511020fb</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 09:14:52</sys_created_on>
+        <sys_id>90593386c3a62010bf15b0d6511020fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 09:14:52</sys_updated_on>
+        <value>x_26525_jira_attachment_mapping</value>
+        <variable display_value="Table">61e05916c31332002841b63b12d3aee4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=9c593386c3a62010bf15b0d6511020fb"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>9c593386c3a62010bf15b0d6511020fb</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 09:14:52</sys_created_on>
+        <sys_id>5c593386c3a62010bf15b0d6511020fc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 09:14:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>9c593386c3a62010bf15b0d6511020fb</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 09:14:52</sys_created_on>
+        <sys_id>10593386c3a62010bf15b0d6511020fd</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:22:05</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value>jira_attachment_id={{a4c97e35-57c5-441f-98bc-882f3efcc26e.attachment_id}}^servicenow_attachment_id={{be83ac94-dd22-4291-9d9d-79f738744a4e.item.sys_id}}^name={{a4c97e35-57c5-441f-98bc-882f3efcc26e.name}}^task={{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="">c974cf8ac3a22010bf15b0d6511020dd</action_type>
+        <action_type_parent display_value="Jira Issue Create">4c95260ac3222010bf15b0d65110203c</action_type_parent>
+        <comment/>
+        <compiled_snapshot>c974cf8ac3a22010bf15b0d6511020dd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="JIRA Incident Ticket Create">93e74f8ec3a22010bf15b0d6511020cd</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:39:05</sys_created_on>
+        <sys_id>a7e74f8ec3a22010bf15b0d6511020fe</sys_id>
+        <sys_mod_count>32</sys_mod_count>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:29:50</sys_updated_on>
+        <ui_id>3ca2dd78-6979-46bf-8cfc-891a1bde9cd4</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=a7e74f8ec3a22010bf15b0d6511020fe"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>a7e74f8ec3a22010bf15b0d6511020fe</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:39:05</sys_created_on>
+        <sys_id>6be78f8ec3a22010bf15b0d651102000</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:39:05</sys_updated_on>
+        <value>SNOW1</value>
+        <variable display_value="Project Key">1474cf8ac3a22010bf15b0d651102006</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>a7e74f8ec3a22010bf15b0d6511020fe</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:39:05</sys_created_on>
+        <sys_id>a7e78f8ec3a22010bf15b0d651102000</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:39:05</sys_updated_on>
+        <value>Bug</value>
+        <variable display_value="issuetype">6474cf8ac3a22010bf15b0d65110201a</variable>
+    </sys_variable_value>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="JIRA Incident Ticket Create">93e74f8ec3a22010bf15b0d6511020cd</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:39:05</sys_created_on>
+        <sys_id>afe78f8ec3a22010bf15b0d65110200b</sys_id>
+        <sys_mod_count>32</sys_mod_count>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:29:50</sys_updated_on>
+        <ui_id>d2fe2a2c-1b30-4144-8f36-3b7572a81858</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=afe78f8ec3a22010bf15b0d65110200b"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>afe78f8ec3a22010bf15b0d65110200b</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:39:05</sys_created_on>
+        <sys_id>abe78f8ec3a22010bf15b0d65110200d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:39:05</sys_updated_on>
+        <value>incident</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=afe78f8ec3a22010bf15b0d65110200b"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>afe78f8ec3a22010bf15b0d65110200b</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:39:05</sys_created_on>
+        <sys_id>67e78f8ec3a22010bf15b0d65110200d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:39:05</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>afe78f8ec3a22010bf15b0d65110200b</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:39:05</sys_created_on>
+        <sys_id>a3e78f8ec3a22010bf15b0d65110200d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:39:05</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>afe78f8ec3a22010bf15b0d65110200b</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:39:05</sys_created_on>
+        <sys_id>2be78f8ec3a22010bf15b0d65110200d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:39:05</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>x_26525_jira_url={{3ca2dd78-6979-46bf-8cfc-891a1bde9cd4.url}}^x_26525_jira_id={{3ca2dd78-6979-46bf-8cfc-891a1bde9cd4.id}}^x_26525_jira_key={{3ca2dd78-6979-46bf-8cfc-891a1bde9cd4.key}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">f9a5f302c3a62010bf15b0d6511020ed</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="JIRA Incident Ticket Create">93e74f8ec3a22010bf15b0d6511020cd</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 09:02:40</sys_created_on>
+        <sys_id>e186bb42c3a62010bf15b0d651102038</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:22:07</sys_updated_on>
+        <ui_id>be83ac94-dd22-4291-9d9d-79f738744a4e</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=e186bb42c3a62010bf15b0d651102038"/>
+    <sys_element_mapping action="delete_multiple" query="id=e186bb42c3a62010bf15b0d651102038"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>items</field>
+        <id>e186bb42c3a62010bf15b0d651102038</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 09:02:40</sys_created_on>
+        <sys_id>2986bb42c3a62010bf15b0d65110203b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 09:02:40</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
+        <value>{{292800c5-1076-455d-ab48-0fad93ef6e00.Records}}</value>
+    </sys_element_mapping>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=93e74f8ec3a22010bf15b0d6511020cd^sys_idNOT INafe78f8ec3a22010bf15b0d65110200d"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="JIRA Incident Ticket Create">93e74f8ec3a22010bf15b0d6511020cd</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:39:06</sys_created_on>
+        <sys_id>afe78f8ec3a22010bf15b0d65110200d</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:22:15</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=afe78f8ec3a22010bf15b0d65110200d"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>afe78f8ec3a22010bf15b0d65110200d</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:39:06</sys_created_on>
+        <sys_id>67e78f8ec3a22010bf15b0d65110200f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:39:06</sys_updated_on>
+        <value>incident</value>
+        <variable display_value="Table">cfca92e0c31322002841b63b12d3ae00</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>afe78f8ec3a22010bf15b0d65110200d</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:39:06</sys_created_on>
+        <sys_id>a3e78f8ec3a22010bf15b0d65110200f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:39:06</sys_updated_on>
+        <value>short_descriptionSTARTSWITHJira</value>
+        <variable display_value="Condition">66aadea0c31322002841b63b12d3aebf</variable>
+    </sys_variable_value>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=93e74f8ec3a22010bf15b0d6511020cd^sys_idNOT IN57e74f8ec3a22010bf15b0d6511020ce"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>93e74f8ec3a22010bf15b0d6511020cd</id>
+        <name>JIRA Incident Ticket</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:39:04</sys_created_on>
+        <sys_id>57e74f8ec3a22010bf15b0d6511020ce</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:39:04</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_flow_input action="delete_multiple" query="model=93e74f8ec3a22010bf15b0d6511020cd^sys_idNOT IN1be74f8ec3a22010bf15b0d6511020cf,d3e74f8ec3a22010bf15b0d6511020e0"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="JIRA Incident Ticket Create">93e74f8ec3a22010bf15b0d6511020cd</model>
+        <model_id>93e74f8ec3a22010bf15b0d6511020cd</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_93e74f8ec3a22010bf15b0d6511020cd</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:39:04</sys_created_on>
+        <sys_id>1be74f8ec3a22010bf15b0d6511020cf</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:22:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="JIRA Incident Ticket Create">93e74f8ec3a22010bf15b0d6511020cd</model>
+        <model_id>93e74f8ec3a22010bf15b0d6511020cd</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_93e74f8ec3a22010bf15b0d6511020cd</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:39:04</sys_created_on>
+        <sys_id>d3e74f8ec3a22010bf15b0d6511020e0</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:22:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_instance action="delete_multiple" query="flow=93e74f8ec3a22010bf15b0d6511020cd^sys_idNOT IN2d86bb42c3a62010bf15b0d651102035,9986bb42c3a62010bf15b0d651102021,9c593386c3a62010bf15b0d6511020fb,a7e74f8ec3a22010bf15b0d6511020fe,afe78f8ec3a22010bf15b0d65110200b"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="">a01a7bc6c3a62010bf15b0d65110209f</action_type>
+        <action_type_parent display_value="Jira Send Attachment">99394702c3e22010bf15b0d65110206d</action_type_parent>
+        <comment/>
+        <compiled_snapshot>a01a7bc6c3a62010bf15b0d65110209f</compiled_snapshot>
+        <display_text/>
+        <flow display_value="JIRA Incident Ticket Create">93e74f8ec3a22010bf15b0d6511020cd</flow>
+        <order>5</order>
+        <parent_ui_id>be83ac94-dd22-4291-9d9d-79f738744a4e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 09:02:40</sys_created_on>
+        <sys_id>2d86bb42c3a62010bf15b0d651102035</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:29:50</sys_updated_on>
+        <ui_id>a4c97e35-57c5-441f-98bc-882f3efcc26e</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=2d86bb42c3a62010bf15b0d651102035"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>2d86bb42c3a62010bf15b0d651102035</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 09:02:40</sys_created_on>
+        <sys_id>6986bb42c3a62010bf15b0d651102037</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 09:02:40</sys_updated_on>
+        <value>https://spssweb.atlassian.net</value>
+        <variable display_value="Endpoint">578213cac3e22010bf15b0d6511020c8</variable>
+    </sys_variable_value>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="">4e17ff82c3a62010bf15b0d6511020fb</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <comment/>
+        <compiled_snapshot>4e17ff82c3a62010bf15b0d6511020fb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="JIRA Incident Ticket Create">93e74f8ec3a22010bf15b0d6511020cd</flow>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 09:02:39</sys_created_on>
+        <sys_id>9986bb42c3a62010bf15b0d651102021</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:29:50</sys_updated_on>
+        <ui_id>292800c5-1076-455d-ab48-0fad93ef6e00</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=9986bb42c3a62010bf15b0d651102021"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>9986bb42c3a62010bf15b0d651102021</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 09:02:39</sys_created_on>
+        <sys_id>1186bb42c3a62010bf15b0d651102024</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 09:02:39</sys_updated_on>
+        <value>sys_attachment</value>
+        <variable display_value="Table">8f400a1587003300663ca1bb36cb0b4b</variable>
+    </sys_variable_value>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="JIRA Incident Ticket Create">93e74f8ec3a22010bf15b0d6511020cd</flow>
+        <order>6</order>
+        <parent_ui_id>be83ac94-dd22-4291-9d9d-79f738744a4e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 09:14:52</sys_created_on>
+        <sys_id>9c593386c3a62010bf15b0d6511020fb</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:29:50</sys_updated_on>
+        <ui_id>9e0a8c3b-9688-40d6-942f-a340e605437c</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=9c593386c3a62010bf15b0d6511020fb"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>9c593386c3a62010bf15b0d6511020fb</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 09:14:52</sys_created_on>
+        <sys_id>90593386c3a62010bf15b0d6511020fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 09:14:52</sys_updated_on>
+        <value>x_26525_jira_attachment_mapping</value>
+        <variable display_value="Table">61e05916c31332002841b63b12d3aee4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=9c593386c3a62010bf15b0d6511020fb"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>9c593386c3a62010bf15b0d6511020fb</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 09:14:52</sys_created_on>
+        <sys_id>5c593386c3a62010bf15b0d6511020fc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 09:14:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>9c593386c3a62010bf15b0d6511020fb</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 09:14:52</sys_created_on>
+        <sys_id>10593386c3a62010bf15b0d6511020fd</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:22:05</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value>jira_attachment_id={{a4c97e35-57c5-441f-98bc-882f3efcc26e.attachment_id}}^servicenow_attachment_id={{be83ac94-dd22-4291-9d9d-79f738744a4e.item.sys_id}}^name={{a4c97e35-57c5-441f-98bc-882f3efcc26e.name}}^task={{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="">c974cf8ac3a22010bf15b0d6511020dd</action_type>
+        <action_type_parent display_value="Jira Issue Create">4c95260ac3222010bf15b0d65110203c</action_type_parent>
+        <comment/>
+        <compiled_snapshot>c974cf8ac3a22010bf15b0d6511020dd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="JIRA Incident Ticket Create">93e74f8ec3a22010bf15b0d6511020cd</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:39:05</sys_created_on>
+        <sys_id>a7e74f8ec3a22010bf15b0d6511020fe</sys_id>
+        <sys_mod_count>32</sys_mod_count>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:29:50</sys_updated_on>
+        <ui_id>3ca2dd78-6979-46bf-8cfc-891a1bde9cd4</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=a7e74f8ec3a22010bf15b0d6511020fe"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>a7e74f8ec3a22010bf15b0d6511020fe</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:39:05</sys_created_on>
+        <sys_id>6be78f8ec3a22010bf15b0d651102000</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:39:05</sys_updated_on>
+        <value>SNOW1</value>
+        <variable display_value="Project Key">1474cf8ac3a22010bf15b0d651102006</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>a7e74f8ec3a22010bf15b0d6511020fe</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:39:05</sys_created_on>
+        <sys_id>a7e78f8ec3a22010bf15b0d651102000</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:39:05</sys_updated_on>
+        <value>Bug</value>
+        <variable display_value="issuetype">6474cf8ac3a22010bf15b0d65110201a</variable>
+    </sys_variable_value>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="JIRA Incident Ticket Create">93e74f8ec3a22010bf15b0d6511020cd</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:39:05</sys_created_on>
+        <sys_id>afe78f8ec3a22010bf15b0d65110200b</sys_id>
+        <sys_mod_count>32</sys_mod_count>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:29:50</sys_updated_on>
+        <ui_id>d2fe2a2c-1b30-4144-8f36-3b7572a81858</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=afe78f8ec3a22010bf15b0d65110200b"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>afe78f8ec3a22010bf15b0d65110200b</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:39:05</sys_created_on>
+        <sys_id>abe78f8ec3a22010bf15b0d65110200d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:39:05</sys_updated_on>
+        <value>incident</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=afe78f8ec3a22010bf15b0d65110200b"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>afe78f8ec3a22010bf15b0d65110200b</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:39:05</sys_created_on>
+        <sys_id>67e78f8ec3a22010bf15b0d65110200d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:39:05</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>afe78f8ec3a22010bf15b0d65110200b</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:39:05</sys_created_on>
+        <sys_id>a3e78f8ec3a22010bf15b0d65110200d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:39:05</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>afe78f8ec3a22010bf15b0d65110200b</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:39:05</sys_created_on>
+        <sys_id>2be78f8ec3a22010bf15b0d65110200d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:39:05</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>x_26525_jira_url={{3ca2dd78-6979-46bf-8cfc-891a1bde9cd4.url}}^x_26525_jira_id={{3ca2dd78-6979-46bf-8cfc-891a1bde9cd4.id}}^x_26525_jira_key={{3ca2dd78-6979-46bf-8cfc-891a1bde9cd4.key}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=afe78f8ec3a22010bf15b0d65110200b^sys_idNOT INafe78f8ec3a22010bf15b0d65110200c"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>values</input_name>
+        <instance>afe78f8ec3a22010bf15b0d65110200b</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"x_26525_jira_id":{"scriptActive":false,"savedValue":""}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:39:05</sys_created_on>
+        <sys_id>afe78f8ec3a22010bf15b0d65110200c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:39:05</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=93e74f8ec3a22010bf15b0d6511020cd^sys_idNOT INe186bb42c3a62010bf15b0d651102038"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">f9a5f302c3a62010bf15b0d6511020ed</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="JIRA Incident Ticket Create">93e74f8ec3a22010bf15b0d6511020cd</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 09:02:40</sys_created_on>
+        <sys_id>e186bb42c3a62010bf15b0d651102038</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:22:07</sys_updated_on>
+        <ui_id>be83ac94-dd22-4291-9d9d-79f738744a4e</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=e186bb42c3a62010bf15b0d651102038"/>
+    <sys_element_mapping action="delete_multiple" query="id=e186bb42c3a62010bf15b0d651102038"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>items</field>
+        <id>e186bb42c3a62010bf15b0d651102038</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 09:02:40</sys_created_on>
+        <sys_id>2986bb42c3a62010bf15b0d65110203b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 09:02:40</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
+        <value>{{292800c5-1076-455d-ab48-0fad93ef6e00.Records}}</value>
+    </sys_element_mapping>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_93e74f8ec3a22010bf15b0d6511020cd^sys_idNOT IN97e74f8ec3a22010bf15b0d6511020dc,97e74f8ec3a22010bf15b0d6511020e6"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_93e74f8ec3a22010bf15b0d6511020cd</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:39:04</sys_created_on>
+        <sys_id>97e74f8ec3a22010bf15b0d6511020dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Jira Integration Hub" source="x_26525_jira">15de5ec2c3222010bf15b0d65110209f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:39:04</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_93e74f8ec3a22010bf15b0d6511020cd</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 05:39:05</sys_created_on>
+        <sys_id>97e74f8ec3a22010bf15b0d6511020e6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Jira Integration Hub" source="x_26525_jira">15de5ec2c3222010bf15b0d65110209f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 05:39:05</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+</record_update>

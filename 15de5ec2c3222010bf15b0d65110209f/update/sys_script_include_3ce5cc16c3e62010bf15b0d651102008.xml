@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_26525_jira.JiraBase</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>JiraBase</name>
+        <script><![CDATA[var JiraBase = Class.create();
+JiraBase.prototype = {
+    initialize: function() {},
+    process: function(request) {
+        var event = request.webhookEvent;
+        var issue = request.issue.key;
+        gs.info('Line 8 ' + event + ' ' + issue);
+        if (event == 'comment_created') {
+            var gr = new GlideRecord('incident');
+            gr.addQuery('x_26525_jira_key', issue);
+            gr.query();
+            if (gr.next()) {
+                var cmnt = request.comment.body;
+				if(cmnt.startsWith("SNOW:")){
+					// do nothing
+				}else{
+                gs.info('Line 16' + JSON.stringify(cmnt));
+                gr.comments = 'JIRA:' + cmnt;
+                gr.update();
+				}
+            }
+        } else if (event == 'jira:issue_updated') {
+            var attachment = request.issue.fields.attachment;
+            gs.info('Line 21 ' + attachment);
+            if (attachment.length > 0) {
+                gs.info('Line 22');
+                this.processAttachment(attachment, issue);
+            }
+        }
+    },
+    processAttachment: function(att, key) {
+        for (var i = 0; i < att.length; i++) {
+            var attachId = att[i].id;
+            gs.info('Line 30 ' + attachId);
+            var grA = new GlideRecord('x_26525_jira_attachment_mapping');
+            //grA.addEncodedQuery('task.ref_incident.x_26525_jira_key='+key+'^jira_attachment_id='+attachId);
+            grA.addEncodedQuery('jira_attachment_id=' + attachId);
+            grA.query();
+            if (grA.next()) {
+                gs.info('Line 36 alredy there ' + attachId);
+            } else {
+                var aid = att[i].id;
+                var acontent = att[i].content.split('/secure/attachment/');
+                var aname = att[i].filename;
+                var grInc = new GlideRecord('incident');
+                grInc.get('x_26525_jira_key', key);
+                try {
+                    var inputs = {};
+                    inputs['endpoint'] = 'https://spssweb.atlassian.net'; // String 
+                    inputs['relative_attachment'] = acontent[1]; // String 
+                    inputs['attachment_name'] = aname; // String 
+                    inputs['incident'] = grInc; // GlideRecord of table: incident 
+                    var result = sn_fd.FlowAPI.getRunner().action('x_26525_jira.jira_get_attachment').inForeground().withInputs(inputs).run();
+                    var outputs = result.getOutputs();
+                    var attachment_id = outputs['attachment_id']; // String
+                    var status = outputs['status']; // String
+					var grTr= new GlideRecord('x_26525_jira_attachment_mapping');
+					grTr.initialize();
+					grTr.name=aname;
+					grTr.jira_attachment_id=aid;
+					grTr.servicenow_attachment_id=attachment_id;
+					grTr.task=grInc.sys_id;
+					grTr.insert();
+                } catch (ex) {
+                    var message = ex.getMessage();
+                    gs.error(message);
+                }
+            }
+        }
+    },
+    type: 'JiraBase'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-27 10:12:56</sys_created_on>
+        <sys_id>3ce5cc16c3e62010bf15b0d651102008</sys_id>
+        <sys_mod_count>38</sys_mod_count>
+        <sys_name>JiraBase</sys_name>
+        <sys_package display_value="Jira Integration Hub" source="x_26525_jira">15de5ec2c3222010bf15b0d65110209f</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
+        <sys_update_name>sys_script_include_3ce5cc16c3e62010bf15b0d651102008</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-27 15:16:02</sys_updated_on>
+    </sys_script_include>
+</record_update>
