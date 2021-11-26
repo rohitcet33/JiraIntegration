@@ -2,18 +2,19 @@
     <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
         <access>public</access>
         <acls/>
+        <action_status/>
         <action_template/>
         <active>true</active>
         <annotation/>
         <callable_by_client_api>false</callable_by_client_api>
         <category display_value="Jira">2c75624ec3222010bf15b0d651102062</category>
+        <compiler_build/>
         <copied_from/>
         <copied_from_name/>
         <description/>
         <ih_action>true</ih_action>
         <internal_name>jira_update_comments</internal_name>
         <label_cache>[{"name":"{{action.endpoint}}","label":"action➛Endpoint","type":"action","ref":""},{"name":"{{action._}}","label":"action➛","type":"action","ref":""},{"name":"{{action.issuekey}}","label":"action➛issueKey","type":"action","ref":""},{"name":"{{action.comments}}","label":"action➛comments","type":"action","ref":""},{"name":"{{step[e86d2636-c380-47c9-bb1d-f5eb835b6772].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":""},{"name":"{{step[e86d2636-c380-47c9-bb1d-f5eb835b6772].status_code}}","label":"step➛REST step➛Status Code","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>627df7cac3a62010bf15b0d6511020ac</latest_snapshot>
         <master_snapshot>aacb3b4ac3a62010bf15b0d6511020d7</master_snapshot>
         <name>Jira Update Comments</name>
         <natlang/>
@@ -69,6 +70,7 @@
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="Jira Update Comments">2e3ab746c3a62010bf15b0d65110204e</action>
         <cid>e86d2636-c380-47c9-bb1d-f5eb835b6772</cid>
+        <error_handling_type/>
         <extended_inputs/>
         <extended_outputs/>
         <icon/>
@@ -186,6 +188,7 @@
         <value>b488624ec3222010bf15b0d6511020c1</value>
         <variable display_value="Credential Alias">445c2a72b3701300176b051a16a8dcc2</variable>
     </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_2beaf70ac3a62010bf15b0d6511020b9^id=2beaf70ac3a62010bf15b0d6511020b9"/>
     <sys_element_mapping action="delete_multiple" query="id=2beaf70ac3a62010bf15b0d6511020b9"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>application</field>
@@ -802,332 +805,6 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_action_output>
-    <sys_hub_step_instance action="delete_multiple" query="action=2e3ab746c3a62010bf15b0d65110204e^sys_idNOT IN2beaf70ac3a62010bf15b0d6511020b9"/>
-    <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="Jira Update Comments">2e3ab746c3a62010bf15b0d65110204e</action>
-        <cid>e86d2636-c380-47c9-bb1d-f5eb835b6772</cid>
-        <extended_inputs/>
-        <extended_outputs/>
-        <icon/>
-        <inputs/>
-        <inputs/>
-        <label>REST step</label>
-        <order>1</order>
-        <outputs/>
-        <section/>
-        <step_type display_value="REST">07a762fb47222200b4fad7527c9a7129</step_type>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:21:54</sys_created_on>
-        <sys_id>2beaf70ac3a62010bf15b0d6511020b9</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:23:40</sys_updated_on>
-    </sys_hub_step_instance>
-    <sys_variable_value action="delete_multiple" query="document_key=2beaf70ac3a62010bf15b0d6511020b9"/>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_step_instance</document>
-        <document_key>2beaf70ac3a62010bf15b0d6511020b9</document_key>
-        <order>25</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:22:36</sys_created_on>
-        <sys_id>211bbb0ac3a62010bf15b0d65110207a</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:22:36</sys_updated_on>
-        <value>{"type":"ADV_NV","value":[]}</value>
-        <variable display_value="Query Parameters">4328e2fb47222200b4fad7527c9a7164</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_step_instance</document>
-        <document_key>2beaf70ac3a62010bf15b0d6511020b9</document_key>
-        <order>13</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:21:56</sys_created_on>
-        <sys_id>37eaf70ac3a62010bf15b0d6511020f9</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:21:56</sys_updated_on>
-        <value>18409d8007482000dada43c0d1021e8f</value>
-        <variable display_value="Capabilities">c30a451d2f201300a09a839fb18c95b4</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_step_instance</document>
-        <document_key>2beaf70ac3a62010bf15b0d6511020b9</document_key>
-        <order>30</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:22:36</sys_created_on>
-        <sys_id>6d1bbb0ac3a62010bf15b0d651102079</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:23:40</sys_updated_on>
-        <value>{"type":"ADV_NV","value":[{"attributes":{"mandatory":false,"omit_if_empty":false},"name":"Content-Type","value":"application/json"}]}</value>
-        <variable display_value="Headers">371837f1c71003007b237f48cb9763b0</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_step_instance</document>
-        <document_key>2beaf70ac3a62010bf15b0d6511020b9</document_key>
-        <order>5</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:21:56</sys_created_on>
-        <sys_id>73eaf70ac3a62010bf15b0d6511020f9</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:21:56</sys_updated_on>
-        <value>define_connection_inline</value>
-        <variable display_value="Connection">91e207d03b50030057a4a2e334efc4a0</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_step_instance</document>
-        <document_key>2beaf70ac3a62010bf15b0d6511020b9</document_key>
-        <order>25</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:21:55</sys_created_on>
-        <sys_id>bbeaf70ac3a62010bf15b0d6511020f8</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:21:55</sys_updated_on>
-        <value>post</value>
-        <variable display_value="HTTP Method">e85b7ebf47222200b4fad7527c9a71e3</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_step_instance</document>
-        <document_key>2beaf70ac3a62010bf15b0d6511020b9</document_key>
-        <order>12</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:21:56</sys_created_on>
-        <sys_id>bbeaf70ac3a62010bf15b0d6511020f9</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:21:56</sys_updated_on>
-        <value>35aa573fd7802200bdbaee5b5e610375</value>
-        <variable display_value="MID Application">f11ebf865f101300a09a2abd7f466652</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_step_instance</document>
-        <document_key>2beaf70ac3a62010bf15b0d6511020b9</document_key>
-        <order>10</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:21:56</sys_created_on>
-        <sys_id>f7eaf70ac3a62010bf15b0d6511020f9</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:21:56</sys_updated_on>
-        <value>b488624ec3222010bf15b0d6511020c1</value>
-        <variable display_value="Credential Alias">445c2a72b3701300176b051a16a8dcc2</variable>
-    </sys_variable_value>
-    <sys_element_mapping action="delete_multiple" query="id=2beaf70ac3a62010bf15b0d6511020b9"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>application</field>
-        <id>2beaf70ac3a62010bf15b0d6511020b9</id>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:21:55</sys_created_on>
-        <sys_id>3beaf70ac3a62010bf15b0d6511020f8</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:21:55</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>base_url</field>
-        <id>2beaf70ac3a62010bf15b0d6511020b9</id>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:21:55</sys_created_on>
-        <sys_id>b3eaf70ac3a62010bf15b0d6511020f8</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:21:55</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
-        <value>{{action.endpoint}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>body</field>
-        <id>2beaf70ac3a62010bf15b0d6511020b9</id>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:21:55</sys_created_on>
-        <sys_id>ffeaf70ac3a62010bf15b0d6511020f6</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:21:55</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
-        <value>{
-    "body": "{{action.comments}}"
-}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>capabilities</field>
-        <id>2beaf70ac3a62010bf15b0d6511020b9</id>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:21:55</sys_created_on>
-        <sys_id>ffeaf70ac3a62010bf15b0d6511020f7</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:21:55</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>connection</field>
-        <id>2beaf70ac3a62010bf15b0d6511020b9</id>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:21:55</sys_created_on>
-        <sys_id>3feaf70ac3a62010bf15b0d6511020f7</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:21:55</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>credential_alias</field>
-        <id>2beaf70ac3a62010bf15b0d6511020b9</id>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:21:55</sys_created_on>
-        <sys_id>77eaf70ac3a62010bf15b0d6511020f8</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:21:55</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>headers</field>
-        <id>2beaf70ac3a62010bf15b0d6511020b9</id>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:22:36</sys_created_on>
-        <sys_id>291bbb0ac3a62010bf15b0d651102079</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:22:36</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>http_method</field>
-        <id>2beaf70ac3a62010bf15b0d6511020b9</id>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:21:55</sys_created_on>
-        <sys_id>b7eaf70ac3a62010bf15b0d6511020f7</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:21:55</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>query_params</field>
-        <id>2beaf70ac3a62010bf15b0d6511020b9</id>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:22:36</sys_created_on>
-        <sys_id>e91bbb0ac3a62010bf15b0d651102079</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:22:36</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>resource_path</field>
-        <id>2beaf70ac3a62010bf15b0d6511020b9</id>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:21:55</sys_created_on>
-        <sys_id>7beaf70ac3a62010bf15b0d6511020f7</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:21:55</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
-        <value>/rest/api/2/issue/{{action.issuekey}}/comment</value>
-    </sys_element_mapping>
-    <sys_hub_step_ext_output action="delete_multiple" query="model=2beaf70ac3a62010bf15b0d6511020b9^sys_idNOT INe7eaf70ac3a62010bf15b0d6511020ea"/>
-    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
-        <active>true</active>
-        <array>false</array>
-        <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,isLocal=true,uiType=password2,uiTypeLabel=Password (2 Way Encrypted),uiUniqueId=28f6bb4e-3dd7-46ee-a609-c8da8585a5d0</attributes>
-        <audit>false</audit>
-        <calculation><![CDATA[(function calculatedFieldValue(current) {
-
-	// Add your code here
-	return '';  // return the calculated value
-
-})(current);]]></calculation>
-        <choice/>
-        <choice_field/>
-        <choice_table/>
-        <column_label/>
-        <comments/>
-        <create_roles/>
-        <default_value/>
-        <defaultsort/>
-        <delete_roles/>
-        <dependent/>
-        <dependent_on_field/>
-        <display>false</display>
-        <dynamic_creation>false</dynamic_creation>
-        <dynamic_creation_script/>
-        <dynamic_default_value/>
-        <dynamic_ref_qual/>
-        <element>sn_auth_token</element>
-        <element_reference>false</element_reference>
-        <foreign_database/>
-        <function_definition/>
-        <function_field>false</function_field>
-        <help/>
-        <hint/>
-        <internal_type display_value="">password2</internal_type>
-        <label>Credential Value</label>
-        <mandatory>false</mandatory>
-        <max_length>255</max_length>
-        <model display_value="REST step">2beaf70ac3a62010bf15b0d6511020b9</model>
-        <model_id>2beaf70ac3a62010bf15b0d6511020b9</model_id>
-        <model_table>sys_hub_step_instance</model_table>
-        <name>var__m_sys_hub_step_ext_output_2beaf70ac3a62010bf15b0d6511020b9</name>
-        <next_element/>
-        <order>7</order>
-        <primary>false</primary>
-        <read_only>false</read_only>
-        <read_roles/>
-        <reference/>
-        <reference_cascade_rule/>
-        <reference_floats>false</reference_floats>
-        <reference_key/>
-        <reference_qual/>
-        <reference_qual_condition/>
-        <reference_type/>
-        <sizeclass/>
-        <spell_check>false</spell_check>
-        <staged>false</staged>
-        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:21:55</sys_created_on>
-        <sys_id>e7eaf70ac3a62010bf15b0d6511020ea</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:22:35</sys_updated_on>
-        <table_reference>false</table_reference>
-        <text_index>false</text_index>
-        <unique>false</unique>
-        <use_dependent_field>false</use_dependent_field>
-        <use_dynamic_default>false</use_dynamic_default>
-        <use_reference_qualifier>simple</use_reference_qualifier>
-        <virtual>false</virtual>
-        <widget/>
-        <write_roles/>
-        <xml_view>false</xml_view>
-    </sys_hub_step_ext_output>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_2e3ab746c3a62010bf15b0d65110204e^sys_idNOT INbb8a730ac3a62010bf15b0d6511020fd,bb8ab30ac3a62010bf15b0d651102004,bb8ab30ac3a62010bf15b0d65110200b"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>endpoint</element>
@@ -1142,11 +819,11 @@
         <sys_created_on>2021-02-27 09:20:17</sys_created_on>
         <sys_id>bb8a730ac3a62010bf15b0d6511020fd</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Endpoint</sys_name>
         <sys_package display_value="Jira Integration Hub" source="x_26525_jira">15de5ec2c3222010bf15b0d65110209f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_2e3ab746c3a62010bf15b0d65110204e_endpoint_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-02-27 09:20:17</sys_updated_on>
         <url/>
@@ -1165,11 +842,11 @@
         <sys_created_on>2021-02-27 09:20:17</sys_created_on>
         <sys_id>bb8ab30ac3a62010bf15b0d651102004</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>issueKey</sys_name>
         <sys_package display_value="Jira Integration Hub" source="x_26525_jira">15de5ec2c3222010bf15b0d65110209f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_2e3ab746c3a62010bf15b0d65110204e_issuekey_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-02-27 09:20:17</sys_updated_on>
         <url/>
@@ -1188,11 +865,11 @@
         <sys_created_on>2021-02-27 09:20:17</sys_created_on>
         <sys_id>bb8ab30ac3a62010bf15b0d65110200b</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>comments</sys_name>
         <sys_package display_value="Jira Integration Hub" source="x_26525_jira">15de5ec2c3222010bf15b0d65110209f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_2e3ab746c3a62010bf15b0d65110204e_comments_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-02-27 09:20:17</sys_updated_on>
         <url/>
@@ -1212,11 +889,11 @@
         <sys_created_on>2021-02-27 09:22:36</sys_created_on>
         <sys_id>611bbb0ac3a62010bf15b0d651102084</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Response</sys_name>
         <sys_package display_value="Jira Integration Hub" source="x_26525_jira">15de5ec2c3222010bf15b0d65110209f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_2e3ab746c3a62010bf15b0d65110204e_response_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-02-27 09:22:36</sys_updated_on>
         <url/>
@@ -1235,11 +912,11 @@
         <sys_created_on>2021-02-27 09:22:36</sys_created_on>
         <sys_id>a11bbb0ac3a62010bf15b0d65110208b</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Status</sys_name>
         <sys_package display_value="Jira Integration Hub" source="x_26525_jira">15de5ec2c3222010bf15b0d65110209f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_2e3ab746c3a62010bf15b0d65110204e_status_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-02-27 09:22:36</sys_updated_on>
         <url/>
@@ -1264,6 +941,7 @@
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
         <acls/>
+        <action_status/>
         <action_template/>
         <annotation/>
         <callable_by_client_api>false</callable_by_client_api>
@@ -1328,6 +1006,7 @@
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="Jira Update Comments">aacb3b4ac3a62010bf15b0d6511020d7</action>
         <cid>e86d2636-c380-47c9-bb1d-f5eb835b6772</cid>
+        <error_handling_type/>
         <extended_inputs/>
         <extended_outputs/>
         <icon/>
@@ -1445,6 +1124,7 @@
         <value>define_connection_inline</value>
         <variable display_value="Connection">91e207d03b50030057a4a2e334efc4a0</variable>
     </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_62cb7b4ac3a62010bf15b0d65110201b^id=62cb7b4ac3a62010bf15b0d65110201b"/>
     <sys_element_mapping action="delete_multiple" query="id=62cb7b4ac3a62010bf15b0d65110201b"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>application</field>
@@ -2061,332 +1741,6 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_action_output>
-    <sys_hub_step_instance action="delete_multiple" query="action=aacb3b4ac3a62010bf15b0d6511020d7^sys_idNOT IN62cb7b4ac3a62010bf15b0d65110201b"/>
-    <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="Jira Update Comments">aacb3b4ac3a62010bf15b0d6511020d7</action>
-        <cid>e86d2636-c380-47c9-bb1d-f5eb835b6772</cid>
-        <extended_inputs/>
-        <extended_outputs/>
-        <icon/>
-        <inputs/>
-        <inputs/>
-        <label>REST step</label>
-        <order>1</order>
-        <outputs/>
-        <section/>
-        <step_type display_value="REST">07a762fb47222200b4fad7527c9a7129</step_type>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:25:40</sys_created_on>
-        <sys_id>62cb7b4ac3a62010bf15b0d65110201b</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:25:41</sys_updated_on>
-    </sys_hub_step_instance>
-    <sys_variable_value action="delete_multiple" query="document_key=62cb7b4ac3a62010bf15b0d65110201b"/>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_step_instance</document>
-        <document_key>62cb7b4ac3a62010bf15b0d65110201b</document_key>
-        <order>10</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:25:41</sys_created_on>
-        <sys_id>32cb7b4ac3a62010bf15b0d651102030</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:25:41</sys_updated_on>
-        <value>b488624ec3222010bf15b0d6511020c1</value>
-        <variable display_value="Credential Alias">445c2a72b3701300176b051a16a8dcc2</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_step_instance</document>
-        <document_key>62cb7b4ac3a62010bf15b0d65110201b</document_key>
-        <order>25</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:25:41</sys_created_on>
-        <sys_id>36cb7b4ac3a62010bf15b0d65110202f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:25:41</sys_updated_on>
-        <value>post</value>
-        <variable display_value="HTTP Method">e85b7ebf47222200b4fad7527c9a71e3</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_step_instance</document>
-        <document_key>62cb7b4ac3a62010bf15b0d65110201b</document_key>
-        <order>13</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:25:41</sys_created_on>
-        <sys_id>7ecb7b4ac3a62010bf15b0d65110202f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:25:41</sys_updated_on>
-        <value>18409d8007482000dada43c0d1021e8f</value>
-        <variable display_value="Capabilities">c30a451d2f201300a09a839fb18c95b4</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_step_instance</document>
-        <document_key>62cb7b4ac3a62010bf15b0d65110201b</document_key>
-        <order>25</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:25:41</sys_created_on>
-        <sys_id>b6cb7b4ac3a62010bf15b0d651102030</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:25:41</sys_updated_on>
-        <value>{"type":"ADV_NV","value":[]}</value>
-        <variable display_value="Query Parameters">4328e2fb47222200b4fad7527c9a7164</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_step_instance</document>
-        <document_key>62cb7b4ac3a62010bf15b0d65110201b</document_key>
-        <order>30</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:25:41</sys_created_on>
-        <sys_id>bacb7b4ac3a62010bf15b0d65110202f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:25:41</sys_updated_on>
-        <value>{"type":"ADV_NV","value":[{"attributes":{"mandatory":false,"omit_if_empty":false},"name":"Content-Type","value":"application/json"}]}</value>
-        <variable display_value="Headers">371837f1c71003007b237f48cb9763b0</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_step_instance</document>
-        <document_key>62cb7b4ac3a62010bf15b0d65110201b</document_key>
-        <order>12</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:25:41</sys_created_on>
-        <sys_id>f2cb7b4ac3a62010bf15b0d651102030</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:25:41</sys_updated_on>
-        <value>35aa573fd7802200bdbaee5b5e610375</value>
-        <variable display_value="MID Application">f11ebf865f101300a09a2abd7f466652</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_step_instance</document>
-        <document_key>62cb7b4ac3a62010bf15b0d65110201b</document_key>
-        <order>5</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:25:41</sys_created_on>
-        <sys_id>f6cb7b4ac3a62010bf15b0d65110202f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:25:41</sys_updated_on>
-        <value>define_connection_inline</value>
-        <variable display_value="Connection">91e207d03b50030057a4a2e334efc4a0</variable>
-    </sys_variable_value>
-    <sys_element_mapping action="delete_multiple" query="id=62cb7b4ac3a62010bf15b0d65110201b"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>application</field>
-        <id>62cb7b4ac3a62010bf15b0d65110201b</id>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:25:41</sys_created_on>
-        <sys_id>fecb7b4ac3a62010bf15b0d65110202e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:25:41</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>base_url</field>
-        <id>62cb7b4ac3a62010bf15b0d65110201b</id>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:25:41</sys_created_on>
-        <sys_id>7acb7b4ac3a62010bf15b0d65110202e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:25:41</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
-        <value>{{action.endpoint}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>body</field>
-        <id>62cb7b4ac3a62010bf15b0d65110201b</id>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:25:41</sys_created_on>
-        <sys_id>f6cb7b4ac3a62010bf15b0d65110202d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:25:41</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
-        <value>{
-    "body": "{{action.comments}}"
-}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>capabilities</field>
-        <id>62cb7b4ac3a62010bf15b0d65110201b</id>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:25:41</sys_created_on>
-        <sys_id>b6cb7b4ac3a62010bf15b0d65110202e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:25:41</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>connection</field>
-        <id>62cb7b4ac3a62010bf15b0d65110201b</id>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:25:41</sys_created_on>
-        <sys_id>32cb7b4ac3a62010bf15b0d65110202e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:25:41</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>credential_alias</field>
-        <id>62cb7b4ac3a62010bf15b0d65110201b</id>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:25:41</sys_created_on>
-        <sys_id>3ecb7b4ac3a62010bf15b0d65110202e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:25:41</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>headers</field>
-        <id>62cb7b4ac3a62010bf15b0d65110201b</id>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:25:41</sys_created_on>
-        <sys_id>f2cb7b4ac3a62010bf15b0d65110202e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:25:41</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>http_method</field>
-        <id>62cb7b4ac3a62010bf15b0d65110201b</id>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:25:41</sys_created_on>
-        <sys_id>bacb7b4ac3a62010bf15b0d65110202d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:25:41</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>query_params</field>
-        <id>62cb7b4ac3a62010bf15b0d65110201b</id>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:25:41</sys_created_on>
-        <sys_id>b2cb7b4ac3a62010bf15b0d65110202f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:25:41</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>resource_path</field>
-        <id>62cb7b4ac3a62010bf15b0d65110201b</id>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:25:41</sys_created_on>
-        <sys_id>7ecb7b4ac3a62010bf15b0d65110202d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:25:41</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
-        <value>/rest/api/2/issue/{{action.issuekey}}/comment</value>
-    </sys_element_mapping>
-    <sys_hub_step_ext_output action="delete_multiple" query="model=62cb7b4ac3a62010bf15b0d65110201b^sys_idNOT INaacb7b4ac3a62010bf15b0d651102021"/>
-    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
-        <active>true</active>
-        <array>false</array>
-        <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,isLocal=true,uiType=password2,uiTypeLabel=Password (2 Way Encrypted),uiUniqueId=28f6bb4e-3dd7-46ee-a609-c8da8585a5d0</attributes>
-        <audit>false</audit>
-        <calculation><![CDATA[(function calculatedFieldValue(current) {
-
-	// Add your code here
-	return '';  // return the calculated value
-
-})(current);]]></calculation>
-        <choice/>
-        <choice_field/>
-        <choice_table/>
-        <column_label/>
-        <comments/>
-        <create_roles/>
-        <default_value/>
-        <defaultsort/>
-        <delete_roles/>
-        <dependent/>
-        <dependent_on_field/>
-        <display>false</display>
-        <dynamic_creation>false</dynamic_creation>
-        <dynamic_creation_script/>
-        <dynamic_default_value/>
-        <dynamic_ref_qual/>
-        <element>sn_auth_token</element>
-        <element_reference>false</element_reference>
-        <foreign_database/>
-        <function_definition/>
-        <function_field>false</function_field>
-        <help/>
-        <hint/>
-        <internal_type display_value="">password2</internal_type>
-        <label>Credential Value</label>
-        <mandatory>false</mandatory>
-        <max_length>255</max_length>
-        <model display_value="REST step">62cb7b4ac3a62010bf15b0d65110201b</model>
-        <model_id>62cb7b4ac3a62010bf15b0d65110201b</model_id>
-        <model_table>sys_hub_step_instance</model_table>
-        <name>var__m_sys_hub_step_ext_output_62cb7b4ac3a62010bf15b0d65110201b</name>
-        <next_element/>
-        <order>7</order>
-        <primary>false</primary>
-        <read_only>false</read_only>
-        <read_roles/>
-        <reference/>
-        <reference_cascade_rule/>
-        <reference_floats>false</reference_floats>
-        <reference_key/>
-        <reference_qual/>
-        <reference_qual_condition/>
-        <reference_type/>
-        <sizeclass/>
-        <spell_check>false</spell_check>
-        <staged>false</staged>
-        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-27 09:25:40</sys_created_on>
-        <sys_id>aacb7b4ac3a62010bf15b0d651102021</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-27 09:25:40</sys_updated_on>
-        <table_reference>false</table_reference>
-        <text_index>false</text_index>
-        <unique>false</unique>
-        <use_dependent_field>false</use_dependent_field>
-        <use_dynamic_default>false</use_dynamic_default>
-        <use_reference_qualifier>simple</use_reference_qualifier>
-        <virtual>false</virtual>
-        <widget/>
-        <write_roles/>
-        <xml_view>false</xml_view>
-    </sys_hub_step_ext_output>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_aacb3b4ac3a62010bf15b0d6511020d7^sys_idNOT IN26cb7b4ac3a62010bf15b0d65110200a,26cb7b4ac3a62010bf15b0d651102011,26cb7b4ac3a62010bf15b0d651102018"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>endpoint</element>
@@ -2401,11 +1755,11 @@
         <sys_created_on>2021-02-27 09:25:40</sys_created_on>
         <sys_id>26cb7b4ac3a62010bf15b0d65110200a</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Endpoint</sys_name>
         <sys_package display_value="Jira Integration Hub" source="x_26525_jira">15de5ec2c3222010bf15b0d65110209f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_aacb3b4ac3a62010bf15b0d6511020d7_endpoint_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-02-27 09:25:40</sys_updated_on>
         <url/>
@@ -2424,11 +1778,11 @@
         <sys_created_on>2021-02-27 09:25:40</sys_created_on>
         <sys_id>26cb7b4ac3a62010bf15b0d651102011</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>issueKey</sys_name>
         <sys_package display_value="Jira Integration Hub" source="x_26525_jira">15de5ec2c3222010bf15b0d65110209f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_aacb3b4ac3a62010bf15b0d6511020d7_issuekey_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-02-27 09:25:40</sys_updated_on>
         <url/>
@@ -2447,11 +1801,11 @@
         <sys_created_on>2021-02-27 09:25:40</sys_created_on>
         <sys_id>26cb7b4ac3a62010bf15b0d651102018</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>comments</sys_name>
         <sys_package display_value="Jira Integration Hub" source="x_26525_jira">15de5ec2c3222010bf15b0d65110209f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_aacb3b4ac3a62010bf15b0d6511020d7_comments_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-02-27 09:25:40</sys_updated_on>
         <url/>
@@ -2471,11 +1825,11 @@
         <sys_created_on>2021-02-27 09:25:41</sys_created_on>
         <sys_id>32cb7b4ac3a62010bf15b0d65110204e</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Status</sys_name>
         <sys_package display_value="Jira Integration Hub" source="x_26525_jira">15de5ec2c3222010bf15b0d65110209f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_aacb3b4ac3a62010bf15b0d6511020d7_status_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-02-27 09:25:41</sys_updated_on>
         <url/>
@@ -2494,14 +1848,18 @@
         <sys_created_on>2021-02-27 09:25:41</sys_created_on>
         <sys_id>fecb7b4ac3a62010bf15b0d651102046</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Response</sys_name>
         <sys_package display_value="Jira Integration Hub" source="x_26525_jira">15de5ec2c3222010bf15b0d65110209f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Jira Integration Hub">15de5ec2c3222010bf15b0d65110209f</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_aacb3b4ac3a62010bf15b0d6511020d7_response_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-02-27 09:25:41</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
+    <sys_hub_action_type_definition action="update">
+        <sys_id>2e3ab746c3a62010bf15b0d65110204e</sys_id>
+        <latest_snapshot>aacb3b4ac3a62010bf15b0d6511020d7</latest_snapshot>
+    </sys_hub_action_type_definition>
 </record_update>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Attachment Mapping" max_length="40" name="x_26525_jira_attachment_mapping" sizeclass="0" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="JIRA Attachment Id" max_length="40" name="jira_attachment_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Name" max_length="100" name="name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="ServiceNow Attachment ID" max_length="40" name="servicenow_attachment_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Task" max_length="32" name="task" reference="task" type="reference"/>
+        <index name="index">
+            <element name="task"/>
+        </index>
+    </element>
+</database>

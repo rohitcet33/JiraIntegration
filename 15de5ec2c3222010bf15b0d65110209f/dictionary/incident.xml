@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="email_client=true,hasWorkflow=true,live_feed=true,all_tables.query_hints=true" audit="true" extends="task" label="Incident" max_length="40" name="incident" sizeclass="72" text_index="true" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="ID" max_length="40" name="x_26525_jira_id" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Key" max_length="40" name="x_26525_jira_key" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="URL" max_length="40" name="x_26525_jira_url" read_only="true" type="url"/>
+    </element>
+</database>
